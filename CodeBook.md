@@ -1,5 +1,5 @@
 # CodeBook.MD file
-John C. McDavid, 10/14/2016
+John C. McDavid, 10/16/2016
 
 Summary Analysis of Data recording Human Activity Using Smartphones Dataset (Version 1.0) - Code Book
 
@@ -19,15 +19,15 @@ The tidy data has Subject (30), Activity (6 for each subject), and average for e
 
 The tidy data set is Signals4.
 
-## Data - master data set ("master","master2")
+## Data - master data set ("master","master3")
   Measurement units of data
-     "t" prefix idicates time domain signal at constant rate of 50 Hz
+     "t" prefix indicates time domain signal at constant rate of 50 Hz
      "f" prefix indicates frequency domain signals
      >> the data are normalized from raw data and bounded by [-1,1] so the data in the datasets used for this analysis is dimensionless
 There are 81 columns:  "Subject ID", "Activity Label", and 79 feature variables.
 Subject ID - subject # (1-30)
 Activity Label - label of activity code performed (six identifiers, see text above)
-The 79 features are listed below.  The descriptions are coded by what the measurement is for.  I will describe how to decode the feature labels rather than repeating similar language for all 66.
+The 79 features are listed below.  The descriptions are coded by what the measurement is for.  I will describe how to decode the feature labels rather than repeating similar language for all 79.
 mean() - mean value of the signal
 std() - standard deviation of the signal
 meanFreq() - mean frequency of the signal
@@ -40,6 +40,7 @@ Mag - magnitude
 Jerk - derived in time from body linear acceleration and angular velocity (Jerk is rate of change in acceleration)
 Body - body movement
 Gravity - Gravity component
+Variable names (column labels) follow:
 "Subject ID"
 "Activity Label"
 "tBodyAcc-mean()-X"
@@ -122,11 +123,11 @@ Gravity - Gravity component
 "fBodyBodyGyroMag-std()"
 "fBodyBodyGyroJerkMag-std()"
 
-## Data - tidy data set ("Signals")
-measurement units - see description above (same as for master datasets)
-see above also for description of how labels are derived
-The variables in this dataset are Averages of all observation for that subject #, activity description (label), and feature so those variable names are pre-pended by "Avg."
-Variable names follow:
+## Data - tidy data set ("Signals4")
+Measurement units - see description above (same as for master datasets)
+See above also for description of how labels are derived
+The variables in this dataset are Averages of all observations for that subject #, activity description (label), and feature so those variable names are pre-pended by "Avg."
+Variable names (column labels) follow:
 "Subject ID"
 "Activity Label"
 "Avg.tBodyAcc-mean()-X"
